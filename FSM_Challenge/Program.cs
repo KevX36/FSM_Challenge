@@ -70,25 +70,44 @@ namespace FSM_Challenge
             switch (state)
             {
                 case EnemyState.Idle:
-                    //TODO: transition to other states based on rand
-                    //HINT: you can also return EnemyState.Idle sometimes to add more variation
+                    if (rand > 0.5f)
+                    {
+                        return EnemyState.WalkingRandomly;
+                    }
+
+                    
                     
                     return EnemyState.Shooting;
 
                 case EnemyState.Shooting:
-                    // TODO: shoot a bullet
-                    // note: there is a Shoot method ready for use! 
+                    if(rand > 0.7f)
+                    {
+                        return EnemyState.Shooting;
+                    }
+                    else if(rand > 0.4f)
+                    {
+                        return EnemyState.WalkingInLine;
+                    }
                     
                     return EnemyState.WalkingRandomly;
                 case EnemyState.WalkingRandomly:
-                    //TODO: move up, down, left or right randomly
-
-                    return EnemyState.WalkingInLine;       
+                    
+                    if (rand > 0.5f)
+                    {
+                        return EnemyState.WalkingRandomly;
+                    }
+                    else if (rand > 0.3f)
+                    {
+                        return EnemyState.Idle;
+                    }
+                        return EnemyState.WalkingInLine;       
                 case EnemyState.WalkingInLine:
-                    //TODO: move player in direction they previously moved.
-                    //HINT: there is a lastEnemyPos variable that tells you the previous position!
-
-                    return EnemyState.Idle;
+                    
+                    if(rand > 0.3f)
+                    {
+                        return EnemyState.WalkingRandomly;
+                    }
+                    return EnemyState.Shooting;
                 default:
                     return EnemyState.Idle; // this case should never happen
             }

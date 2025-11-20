@@ -6,3 +6,11 @@ C:\Users\W0282611\Documents\FSM_Challenge\FSM_Challenge\obj\Debug\FSM_Challenge.
 C:\Users\W0282611\Documents\FSM_Challenge\FSM_Challenge\obj\Debug\FSM_Challenge.exe
 C:\Users\W0282611\Documents\FSM_Challenge\FSM_Challenge\obj\Debug\FSM_Challenge.pdb
 C:\Users\W0282611\Documents\FSM_Challenge\FSM_Challenge\obj\Debug\FSM_Challenge.exe.config
+C:\nscc_work\FSM_Challenge\FSM_Challenge\bin\Debug\FSM_Challenge.exe.config
+C:\nscc_work\FSM_Challenge\FSM_Challenge\bin\Debug\FSM_Challenge.exe
+C:\nscc_work\FSM_Challenge\FSM_Challenge\bin\Debug\FSM_Challenge.pdb
+C:\nscc_work\FSM_Challenge\FSM_Challenge\obj\Debug\FSM_Challenge.csproj.AssemblyReference.cache
+C:\nscc_work\FSM_Challenge\FSM_Challenge\obj\Debug\FSM_Challenge.exe.config
+C:\nscc_work\FSM_Challenge\FSM_Challenge\obj\Debug\FSM_Challenge.csproj.CoreCompileInputs.cache
+C:\nscc_work\FSM_Challenge\FSM_Challenge\obj\Debug\FSM_Challenge.exe
+C:\nscc_work\FSM_Challenge\FSM_Challenge\obj\Debug\FSM_Challenge.pdb
