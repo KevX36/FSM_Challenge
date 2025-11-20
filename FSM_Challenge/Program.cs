@@ -61,12 +61,14 @@ namespace FSM_Challenge
             }
 
         }
-
+        static int moveX = 1;
+        static int moveY = 0;
+        
         static EnemyState ProcessState(EnemyState state)
         {
             // TODO: Use rand in the switch statement to determine transitions
             double rand = random.NextDouble();
-
+            
             switch (state)
             {
                 case EnemyState.Idle:
@@ -80,6 +82,9 @@ namespace FSM_Challenge
                     return EnemyState.Shooting;
 
                 case EnemyState.Shooting:
+
+                    Shoot();
+
                     if(rand > 0.7f)
                     {
                         return EnemyState.Shooting;
@@ -91,7 +96,13 @@ namespace FSM_Challenge
                     
                     return EnemyState.WalkingRandomly;
                 case EnemyState.WalkingRandomly:
-                    
+                    int rando = random.Next(1,5);
+                    Console.Write(rando);
+                    if (rando == 1) moveX = 1; moveY = 0;
+                    if (rando == 2) moveX = -1; moveY = 0;
+                    if (rando == 3) moveX = 0; moveY = 1; 
+                    if (rando == 4) moveX = 0; moveY = -1;
+                    Move(moveX, moveY);
                     if (rand > 0.5f)
                     {
                         return EnemyState.WalkingRandomly;
@@ -102,7 +113,7 @@ namespace FSM_Challenge
                     }
                         return EnemyState.WalkingInLine;       
                 case EnemyState.WalkingInLine:
-                    
+                    Move(moveX, moveY);
                     if(rand > 0.3f)
                     {
                         return EnemyState.WalkingRandomly;
